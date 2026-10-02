@@ -1,0 +1,4 @@
+variable,std_beta,ci_low,ci_high,t,p,raw_coef_stars
+Organizational Climate,0.5941,0.5535,0.6346,28.7971,0.0,0.5557
+Career Opportunities,0.2532,0.2102,0.2962,11.564,0.0,0.2442
+Compensation & Benefits,0.2245,0.1941,0.2549,14.5023,0.0,0.1917

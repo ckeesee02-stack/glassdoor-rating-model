@@ -1,0 +1,16 @@
+,value
+n_companies,495.0
+cronbach_alpha_climate,0.9437
+max_vif_6_features,14.6111
+max_vif_3_features,3.2884
+r2_full_sample,0.9284
+adj_r2_full_sample,0.928
+train_r2,0.9333
+test_r2,0.8997
+cv_r2_mean,0.9253
+cv_r2_min,0.8908
+cv_r2_max,0.953
+cv_mae_stars,0.0641
+enet_alpha,0.006
+enet_l1_ratio,0.05
+enet_test_r2,0.8995
