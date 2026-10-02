@@ -84,6 +84,36 @@ Correlation does not equate to causation. Glassdoor ratings are also prone to se
 
 ---
 
-### About the data
+## Repo Structure
 
-Ratings come from Glassdoor's public "Company ratings over time" charts. Company-level data is not redistributed in this repo; the charts and summary statistics above are derived from it.
+```
+glassdoor-rating-model/
+├── src/
+│   ├── model.py        # composite, VIF, standardized OLS, relative weights, train/test, elastic net, repeated CV
+│   └── charts.py       # builds images/02 to 05
+├── results/            # every table the script produces (CSV)
+│   ├── model_summary.csv
+│   ├── coefficients.csv
+│   ├── relative_weights.csv
+│   ├── vif.csv
+│   ├── correlations.csv
+│   ├── descriptives.csv
+│   └── cv_folds.csv
+├── images/             # charts used in this README
+├── data/README.md      # expected data schema
+└── requirements.txt
+```
+
+## Reproduce
+
+```bash
+pip install -r requirements.txt
+python src/model.py --data data/glassdoor_sp500_medians.csv
+python src/charts.py --data data/glassdoor_sp500_medians.csv
+```
+
+`model.py` writes all tables to `results/` and prints the key numbers. Rerunning it on the median values (stored to 3 decimals) reproduces the headline figures within rounding: standardized betas 0.59 / 0.25 / 0.22, relative weights 45% / 33% / 22%, max VIF 14.6 before and 3.29 after, test R² 0.90, and CV R² 0.925 with `random_state=42`. Small differences from the figures above (for example CV R² 0.922) come from the random fold assignment.
+
+## About the Data
+
+Ratings come from Glassdoor's public "Company ratings over time" charts. Company-level data is not redistributed in this repo; the charts and tables are derived from it. See `data/README.md` for the expected format.
