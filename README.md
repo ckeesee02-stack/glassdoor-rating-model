@@ -9,7 +9,7 @@
 ### Relative Weights of Each Variable
 
 1. **Organizational Climate (45%)**
-   - Composite of Senior Management, Culture & Values, Diversity & Inclusion, and Work/Life Balance (alpha = 0.95)
+   - Composite of Senior Management, Culture & Values, Diversity & Inclusion, and Work/Life Balance (alpha = 0.94)
 2. **Career Opportunities (33%)**
 3. **Compensation and Benefits (22%)**
 
